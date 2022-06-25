@@ -1,0 +1,17 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "Yes/cloud-wa-komerzio/(.*)": "<rootDir>/../libs/cloud-wa-komerzio/src/$1",
+    "Yes/cloud-wa-komerzio": "<rootDir>/../libs/cloud-wa-komerzio/src"
+  }
+}

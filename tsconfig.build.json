@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "test", "dist", "**/*spec.ts"],
+  "paths": {
+    "@app/komerzio-wa": [
+        "libs/cloud-wa-komerzio"
+    ],
+    "@app/komerzio-wa/*": [
+        "libs/cloud-wa-komerzio/src/*"
+    ]
+  }
+}

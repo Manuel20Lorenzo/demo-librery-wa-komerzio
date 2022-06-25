@@ -1,0 +1,18 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "cloud-wa-komerzio": {
+      "type": "library",
+      "root": "libs/cloud-wa-komerzio",
+      "entryFile": "index",
+      "sourceRoot": "libs/cloud-wa-komerzio/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/cloud-wa-komerzio/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}
