@@ -28,7 +28,6 @@ export class templateServiceWA {
           },
         },
         {
-          /* EAAT4HsP2hXIBAFaCUDaPbgOEYCcVXyH5ZB5INIGyanLTOj5IhKCZCTPsvqZBLMdSPzZA3BukQySmOkzhmeKK6WvThUFyG2ZCZBZCZBXOclR2TMoEe9ZBATiz4PV2gE2AsSLgH0AmlLzjYNL6NADkJVDKBQMoIh3QOMoCiY64HlZCwuIVLb0i0T3RPnNAkKw5wlZAAYAPAPwgOXU0QZDZD 
           headers: {
             Authorization: 'Bearer '+config.token,
           },
@@ -49,9 +48,8 @@ export class templateServiceWA {
           },
         },
         {
-          /* EAAT4HsP2hXIBAFaCUDaPbgOEYCcVXyH5ZB5INIGyanLTOj5IhKCZCTPsvqZBLMdSPzZA3BukQySmOkzhmeKK6WvThUFyG2ZCZBZCZBXOclR2TMoEe9ZBATiz4PV2gE2AsSLgH0AmlLzjYNL6NADkJVDKBQMoIh3QOMoCiY64HlZCwuIVLb0i0T3RPnNAkKw5wlZAAYAPAPwgOXU0QZDZD */
           headers: {
-            Authorization: 'Bearer EAAT4HsP2hXIBAAwdDV0IwRbmyDkw5wZAjP0DJ4uAncRTKWD96oXxBc4vXUHaEjutZBZAEa70taWyPoetO2dl1fMMy7rGlALCR1ZCdoFYPSasxVIkZCpbHik19lis4gfMHnxInl4eyfNxoTZC2bAzgSIQPnCfuFcFkhgAm0TQ1ZAZAHYHM19qd70co63c1hVgenuZBulqhKu8BswZDZD',
+            Authorization: 'Bearer '+config.token,
           },
         }
       ).subscribe(
@@ -87,7 +85,6 @@ export class templateServiceWA {
         },
       },
       {
-        /* EAAT4HsP2hXIBAFaCUDaPbgOEYCcVXyH5ZB5INIGyanLTOj5IhKCZCTPsvqZBLMdSPzZA3BukQySmOkzhmeKK6WvThUFyG2ZCZBZCZBXOclR2TMoEe9ZBATiz4PV2gE2AsSLgH0AmlLzjYNL6NADkJVDKBQMoIh3QOMoCiY64HlZCwuIVLb0i0T3RPnNAkKw5wlZAAYAPAPwgOXU0QZDZD */
         headers: {
           Authorization: 'Bearer ' + config.token,
         },

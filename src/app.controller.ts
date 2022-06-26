@@ -52,9 +52,8 @@ export class AppController {
           },
         },
         {
-          /* EAAT4HsP2hXIBAFaCUDaPbgOEYCcVXyH5ZB5INIGyanLTOj5IhKCZCTPsvqZBLMdSPzZA3BukQySmOkzhmeKK6WvThUFyG2ZCZBZCZBXOclR2TMoEe9ZBATiz4PV2gE2AsSLgH0AmlLzjYNL6NADkJVDKBQMoIh3QOMoCiY64HlZCwuIVLb0i0T3RPnNAkKw5wlZAAYAPAPwgOXU0QZDZD 
           headers: {
-            Authorization: 'Bearer EAAT4HsP2hXIBAKymuZB2bZAitcMu26NlqTAYlGxotwQBxpHiUMafwpS47FZC0ukX0PXYxAC17tWzqiiDWTQFR89G2RiLMBePR8hS8ZBEzhwtxzgIAHxGZA9ti9zW7jTQZA8PlCd0zZC1tKOy39D3uOZBsiO6um8XUZAB2qjARnidF7AHoP8pyPzFXGBgWtb2KqPRTGnaZAZBPZAKOAZDZD',
+            Authorization: 'Bearer TOKEN',
           },
         }
       ).subscribe(
@@ -84,7 +83,7 @@ export class AppController {
     {
         "config":{
             "idBussiness": "105513325503375",
-            "token": "EAAT4HsP2hXIBAAcJ3Bp3XmjrPFOHQAM6CQ8BOtFGoxBy2yZCarHKkprCfx4ADZBalHmuajfeSQjGZAkbdZCJaz79RWHxnTDqm61qnMAgxax0oZAqkBIXQfyCAHXnRdmJZBoUgOg1sZA8ZCxgmmW2l9caBvJTRMbBPcgHFIEQvLBNJB5LDFontuBolSPskPy6AvjyOCLQ5UMspwZDZD"
+            "token": "TOKEN"
         },
         "contact":"584241599592",
         "type": "image",
