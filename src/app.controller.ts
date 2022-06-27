@@ -175,5 +175,36 @@ export class AppController {
       }
     )
   }
+
+  @Post('getAllTemplate')
+  getAllTemplate(@Res() res:any, @Body() data:any){
+    console.log(data)
+    this.cloudKomerzio.getAllTemplateMetaWA(data).then(
+      (_res)=>{
+        console.log(_res)
+        return res.status(HttpStatus.OK).send(_res);
+      }
+    ).catch(
+      (err)=>{
+        return res.status(HttpStatus.BAD_REQUEST).send(err)
+      }
+    )
+  }
+
+  @Post('getFilterNameTemplate')
+  getFilterNameTemplate(@Res() res:any, @Body() data:any){
+    console.log('getFilterNameTemplate: ',data)
+    this.cloudKomerzio.getFilterNameTemplate(data).then(
+      (_res)=>{
+        console.log(_res)
+        return res.status(HttpStatus.OK).send(_res)
+      }
+    ).catch(
+      (err)=>{
+        return res.status(HttpStatus.BAD_REQUEST).send(err)
+      }
+    )
+  }
+  
 }
 

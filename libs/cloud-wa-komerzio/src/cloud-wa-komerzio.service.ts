@@ -1,8 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable @typescript-eslint/ban-types */
 import { Injectable } from '@nestjs/common';
-import { templateServiceWA } from './service/templateMsg.service';
-import { sendMessage } from './service/sendMessage.service';
 import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
 import { map } from 'rxjs/operators';
@@ -11,8 +7,6 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class CloudWaKomerzioService {
   constructor(
-    private templateServiceWA: templateServiceWA,
-    private sendMessage: sendMessage,
     private httpService: HttpService
   ) {}
   components: Array<{
@@ -245,6 +239,56 @@ export class CloudWaKomerzioService {
       )
     }
   }
+
+  getAllTemplateMetaWA(config:{
+    idBussiness:string,
+    token:string
+  }){
+    return this.httpService.get('https://graph.facebook.com/v14.0/'+config.idBussiness+'/message_templates',
+    {
+      headers: {
+        Authorization: 'Bearer ' + config.token,
+      },
+    })
+    .toPromise()
+    .then(
+      (res)=>{
+        return res.data
+      }
+    ).catch(
+      (err)=>{
+        return err.response.data.error;
+      }
+    )
+  }
+  getFilterNameTemplate(config:{
+    idBussiness:string,
+    token:string,
+    messageTemplateNamespace:string
+  }){
+    /* https://graph.facebook.com/v14.0/{whatsapp-business-account-ID}
+      ?fields=message_template_namespace
+      &access_token={system-user-access-token} */
+      return this.httpService.get(
+        'https://graph.facebook.com/v14.0/'+config.idBussiness+'?fields='+config.messageTemplateNamespace,
+        {
+          headers: {
+            Authorization: 'Bearer ' + config.token,
+          },
+        }/* +'&access_token='+config.token */
+      )
+      .toPromise()
+      .then(
+        (res)=>{
+          return res.data
+        }
+      ).catch(
+        (err)=>{
+          return err.response.data.error;
+        }
+      )
+  }
+
   /* FUNCIONES SECUNDARIA... */
   private sendText(config,_contact,_body): Promise<any>{
     console.log('data: ',config,_contact,_body)
